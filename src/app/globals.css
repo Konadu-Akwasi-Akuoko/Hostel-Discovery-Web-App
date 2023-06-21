@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Desktop CSS */
+.horizontal-padding {
+  @apply px-[15vw];
+}
+
+/* Mobile CSS */
+@media (max-width: 1023px) {
+  .horizontal-padding {
+    @apply px-[5vw];
+  }
+}
