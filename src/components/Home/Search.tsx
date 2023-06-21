@@ -51,7 +51,7 @@ export default function Search() {
           </div>
         </div>
 
-        <button className="btn btn-neutral mb-8 self-center w-1/5">
+        <button className="btn mb-8 self-center w-1/5 bg-rose-700 hover:bg-rose-950 text-white">
           Search
         </button>
       </div>

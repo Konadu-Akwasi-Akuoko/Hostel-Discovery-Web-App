@@ -22,7 +22,9 @@ export default function Hero() {
             location, amenities, price and more to find your perfect match. Book
             now and enjoy your stay.
           </p>
-          <button className="btn btn-neutral">Find A Hostel Now</button>
+          <button className="btn  bg-rose-700 hover:bg-rose-950 text-white">
+            Find A Hostel Now
+          </button>
         </div>
       </div>
     </div>
