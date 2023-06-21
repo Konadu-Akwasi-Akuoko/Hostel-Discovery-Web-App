@@ -32,6 +32,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:18.2.13"],\
             ["@types/react-dom", "npm:18.2.6"],\
             ["autoprefixer", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:10.4.14"],\
+            ["daisyui", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:3.1.5"],\
             ["eslint", "npm:8.43.0"],\
             ["eslint-config-next", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:13.4.6"],\
             ["next", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:13.4.6"],\
@@ -1141,6 +1142,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["colord", [\
+        ["npm:2.9.3", {\
+          "packageLocation": "./.yarn/cache/colord-npm-2.9.3-5c35c27898-95d909bfbc.zip/node_modules/colord/",\
+          "packageDependencies": [\
+            ["colord", "npm:2.9.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["commander", [\
         ["npm:4.1.1", {\
           "packageLocation": "./.yarn/cache/commander-npm-4.1.1-22a0fe921b-d7b9913ff9.zip/node_modules/commander/",\
@@ -1180,6 +1190,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["css-selector-tokenizer", [\
+        ["npm:0.8.0", {\
+          "packageLocation": "./.yarn/cache/css-selector-tokenizer-npm-0.8.0-b6bad298a3-1eb7ca7d2c.zip/node_modules/css-selector-tokenizer/",\
+          "packageDependencies": [\
+            ["css-selector-tokenizer", "npm:0.8.0"],\
+            ["cssesc", "npm:3.0.0"],\
+            ["fastparse", "npm:1.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["cssesc", [\
         ["npm:3.0.0", {\
           "packageLocation": "./.yarn/cache/cssesc-npm-3.0.0-15ec56f86f-f8c4ababff.zip/node_modules/cssesc/",\
@@ -1194,6 +1215,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/csstype-npm-3.1.2-cead7d99b2-e1a52e6c25.zip/node_modules/csstype/",\
           "packageDependencies": [\
             ["csstype", "npm:3.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["daisyui", [\
+        ["npm:3.1.5", {\
+          "packageLocation": "./.yarn/cache/daisyui-npm-3.1.5-2a0ccd3716-02b560e134.zip/node_modules/daisyui/",\
+          "packageDependencies": [\
+            ["daisyui", "npm:3.1.5"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:3.1.5", {\
+          "packageLocation": "./.yarn/__virtual__/daisyui-virtual-1106ba45dd/0/cache/daisyui-npm-3.1.5-2a0ccd3716-02b560e134.zip/node_modules/daisyui/",\
+          "packageDependencies": [\
+            ["daisyui", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:3.1.5"],\
+            ["@types/postcss", null],\
+            ["colord", "npm:2.9.3"],\
+            ["css-selector-tokenizer", "npm:0.8.0"],\
+            ["postcss", "npm:8.4.24"],\
+            ["postcss-js", "virtual:9311a8c9fc2fa723a363b04526c261872a9280ff9a5542cdc84255404f48ad5c7925fba5ed45881f7890d0d836206f3c952ef9a86f561b44b7d6e17f15c70e68#npm:4.0.1"],\
+            ["tailwindcss", "npm:3.3.2"]\
+          ],\
+          "packagePeers": [\
+            "@types/postcss",\
+            "postcss"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2035,6 +2082,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["fastparse", [\
+        ["npm:1.1.2", {\
+          "packageLocation": "./.yarn/cache/fastparse-npm-1.1.2-6a35154770-c4d199809d.zip/node_modules/fastparse/",\
+          "packageDependencies": [\
+            ["fastparse", "npm:1.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["fastq", [\
         ["npm:1.15.0", {\
           "packageLocation": "./.yarn/cache/fastq-npm-1.15.0-1013f6514e-0170e6bfcd.zip/node_modules/fastq/",\
@@ -2493,6 +2549,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:18.2.13"],\
             ["@types/react-dom", "npm:18.2.6"],\
             ["autoprefixer", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:10.4.14"],\
+            ["daisyui", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:3.1.5"],\
             ["eslint", "npm:8.43.0"],\
             ["eslint-config-next", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:13.4.6"],\
             ["next", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:13.4.6"],\
