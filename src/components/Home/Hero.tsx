@@ -13,7 +13,7 @@ export default function Hero() {
         />
         <div>
           <h1 className="text-5xl font-bold">
-            Discover the best hostels that match your needs and budget.
+            Discover the best hostels that is budget friendly
           </h1>
           <p className="py-6">
             No matter what kind of hostel you&apos;re looking for, we have it
