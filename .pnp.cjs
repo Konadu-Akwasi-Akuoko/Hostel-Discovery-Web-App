@@ -28,6 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@heroicons/react", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:2.0.18"],\
             ["@tailwindcss/typography", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:0.5.9"],\
             ["@types/node", "npm:20.3.1"],\
             ["@types/react", "npm:18.2.13"],\
@@ -120,6 +121,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@eslint-js-npm-8.43.0-60a60994b7-580487a09c.zip/node_modules/@eslint/js/",\
           "packageDependencies": [\
             ["@eslint/js", "npm:8.43.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@heroicons/react", [\
+        ["npm:2.0.18", {\
+          "packageLocation": "./.yarn/cache/@heroicons-react-npm-2.0.18-3febb62534-597e866881.zip/node_modules/@heroicons/react/",\
+          "packageDependencies": [\
+            ["@heroicons/react", "npm:2.0.18"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:2.0.18", {\
+          "packageLocation": "./.yarn/__virtual__/@heroicons-react-virtual-8f2fb2381f/0/cache/@heroicons-react-npm-2.0.18-3febb62534-597e866881.zip/node_modules/@heroicons/react/",\
+          "packageDependencies": [\
+            ["@heroicons/react", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:2.0.18"],\
+            ["@types/react", "npm:18.2.13"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2572,6 +2595,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["hostel-dsicovery", "workspace:."],\
+            ["@heroicons/react", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:2.0.18"],\
             ["@tailwindcss/typography", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:0.5.9"],\
             ["@types/node", "npm:20.3.1"],\
             ["@types/react", "npm:18.2.13"],\
