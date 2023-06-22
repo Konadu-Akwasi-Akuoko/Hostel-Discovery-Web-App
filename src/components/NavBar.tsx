@@ -12,7 +12,11 @@ export default function NavBar() {
         <Link href={"/"}>
           <div className="flex flex-row">
             <Image src={Logo} alt="Logo" height={45} />
-            <p className={`${ubuntu.className} text-4xl font-bold`}>phynda</p>
+            <p
+              className={`${ubuntu.className} text-rose-700 text-4xl font-bold`}
+            >
+              phynda
+            </p>
           </div>
         </Link>
 

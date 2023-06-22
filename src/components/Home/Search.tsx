@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Search() {
   return (
-    <section className="mg-[5vw] lg:mx-[15vw] mb-16 px-6 border border-slate-300 rounded-lg">
-      <p className=" py-4 border-b border-slate-200 font-medium">
+    <section className="mg-[5vw] lg:mx-[15vw] mb-16 px-6 border border-rose-200 rounded-lg">
+      <p className=" py-4 border-b border-rose-200 font-medium">
         Find your next best hostel
       </p>
       <div className=" flex flex-col justify-center">

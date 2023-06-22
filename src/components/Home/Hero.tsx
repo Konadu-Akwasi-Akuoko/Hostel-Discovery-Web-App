@@ -12,8 +12,8 @@ export default function Hero() {
           className=" w-full lg:w-2/5 rounded-lg shadow-xl"
         />
         <div>
-          <h1 className="text-5xl font-bold">
-            Discover the best hostels that is budget friendly
+          <h1 className="text-5xl font-bold text-rose-700">
+            Discover the best hostels that are budget friendly
           </h1>
           <p className="py-6">
             No matter what kind of hostel you&apos;re looking for, we have it
