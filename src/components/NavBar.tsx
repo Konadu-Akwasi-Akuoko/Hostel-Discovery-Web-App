@@ -20,6 +20,7 @@ export default function NavBar() {
           </div>
         </Link>
 
+        {/* Nav menu */}
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1 text-base">
             <li>
