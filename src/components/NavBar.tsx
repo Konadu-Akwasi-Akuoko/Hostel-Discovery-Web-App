@@ -21,16 +21,7 @@ export default function NavBar() {
         </Link>
 
         {/* Nav menu */}
-        <div className="flex-none">
-          <ul className="menu menu-horizontal px-1 text-base">
-            <li>
-              <Link href={"/"}>Favorites</Link>
-            </li>
-            <li>
-              <Link href={"/"}>Sign In</Link>
-            </li>
-          </ul>
-        </div>
+        
       </header>
       <div className="flex-1 w-full h-1 border-b border-slate-300"></div>
     </>
