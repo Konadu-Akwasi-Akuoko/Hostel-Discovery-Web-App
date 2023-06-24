@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <main className="bg-[--tomato-4]">
+    <main>
       <Hero />
       <Search />
       <PopularHostels />

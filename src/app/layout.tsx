@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={ubuntu.className + " bg-slate-50 min-h-screen"}>
+      <body className={ubuntu.className + " bg-[--tomato-1] min-h-screen"}>
         <NavBar />
         {children}
       </body>

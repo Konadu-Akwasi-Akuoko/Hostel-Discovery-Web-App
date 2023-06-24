@@ -42,6 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["clsx", "npm:1.2.1"],\
             ["eslint", "npm:8.43.0"],\
             ["eslint-config-next", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:13.4.7"],\
+            ["lucide-react", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:0.252.0"],\
             ["next", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:13.4.7"],\
             ["postcss", "npm:8.4.24"],\
             ["react", "npm:18.2.0"],\
@@ -3387,6 +3388,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["clsx", "npm:1.2.1"],\
             ["eslint", "npm:8.43.0"],\
             ["eslint-config-next", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:13.4.7"],\
+            ["lucide-react", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:0.252.0"],\
             ["next", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:13.4.7"],\
             ["postcss", "npm:8.4.24"],\
             ["react", "npm:18.2.0"],\
@@ -4021,6 +4023,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/lru-cache-npm-9.1.2-4846dc8c34-d3415634be.zip/node_modules/lru-cache/",\
           "packageDependencies": [\
             ["lru-cache", "npm:9.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lucide-react", [\
+        ["npm:0.252.0", {\
+          "packageLocation": "./.yarn/cache/lucide-react-npm-0.252.0-9c9b33d6d2-59c5dd33fa.zip/node_modules/lucide-react/",\
+          "packageDependencies": [\
+            ["lucide-react", "npm:0.252.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:0.252.0", {\
+          "packageLocation": "./.yarn/__virtual__/lucide-react-virtual-daf9714603/0/cache/lucide-react-npm-0.252.0-9c9b33d6d2-59c5dd33fa.zip/node_modules/lucide-react/",\
+          "packageDependencies": [\
+            ["lucide-react", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:0.252.0"],\
+            ["@types/react", "npm:18.2.14"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
