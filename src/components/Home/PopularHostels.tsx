@@ -12,7 +12,7 @@ export default function PopularHostels() {
         {hostelCardData.map((hostel, index) => {
           return (
             <Link href={`/`} key={index}>
-              <div className="card card-compact max-w-7xl max-h-72 bg-base-100 shadow-xl overflow-hidden relative">
+              <div className="card card-compact lg:max-w-[400px] max-h-72 bg-base-100 shadow-xl overflow-hidden relative">
                 <figure className="w-full h-full">
                   <img
                     src={hostel.image.src}
@@ -29,13 +29,16 @@ export default function PopularHostels() {
                 </figure>
                 <div className="absolute top-4 left-4 flex flex-col gap-2">
                   <h2 className="bg-white py-1 px-2 lg:py-2 lg:px-3 text-rose-800 font-bold text-base lg:text-lg rounded-full">
-                    {hostel.name}
+                    {hostel.name}<span>
+                      
+                    </span>
                   </h2>
                   <p className="bg-white py-1 px-2 lg:py-2 lg:px-3 max-w-fit font-bold text-base lg:text-lg rounded-full">
                     {hostel.rating}
                   </p>
                   <p className="bg-white py-1 px-2 lg:py-2 lg:px-3 max-w-fit font-bold text-base lg:text-lg rounded-full">
-                    {hostel.avgPrice}
+                    Avg.{" "}
+                    <span className="text-rose-800">{hostel.avgPrice}</span>
                   </p>
                 </div>
               </div>
