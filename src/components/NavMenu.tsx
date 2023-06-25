@@ -5,7 +5,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  navigationMenuTriggerStyle,
+  navigationMenuTriggerStyleT,
 } from "./ui/navigation-menu";
 import Link from "next/link";
 
@@ -15,22 +15,14 @@ export default function NavMenu() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href={"/"} legacyBehavior passHref>
-            <NavigationMenuLink
-              className={
-                "hover:bg-[--tomato-4] " + navigationMenuTriggerStyle()
-              }
-            >
+            <NavigationMenuLink className={navigationMenuTriggerStyleT()}>
               Favorites
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href={"/"} legacyBehavior passHref>
-            <NavigationMenuLink
-              className={
-                "hover:bg-[--tomato-4] " + navigationMenuTriggerStyle()
-              }
-            >
+            <NavigationMenuLink className={navigationMenuTriggerStyleT()}>
               Sign In
             </NavigationMenuLink>
           </Link>

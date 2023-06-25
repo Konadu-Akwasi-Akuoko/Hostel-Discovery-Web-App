@@ -2,11 +2,11 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -16,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        tomato: generateScale("tomato"),
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
@@ -33,4 +36,20 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
+};
+
+// Generating radix colors and adding it to the project
+function generateScale(name) {
+  // Generate an array of scales with 12 values
+  let scale = Array.from({ length: 12 }, (_, i) => {
+    let id = i + 1;
+    // Return an array of arrays and flatten it to be 2 arrays inside the main array
+    return [
+      [id, `var(--${name}-${id})`],
+      [`a${id}`, `var(--${name}-a${id})`],
+    ];
+  }).flat();
+
+  // Use the array of arrays to create a color object
+  return Object.fromEntries(scale);
 }
