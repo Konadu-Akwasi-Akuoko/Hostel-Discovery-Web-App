@@ -7,6 +7,13 @@
 @import "@radix-ui/colors/tomato-dark.css";
 @import "@radix-ui/colors/tomato-dark-alpha.css";
 
+h1 {
+  @apply text-4xl lg:text-5xl font-bold text-[--tomato-11];
+}
+p {
+  @apply text-tomato-12;
+}
+
 /* Desktop CSS */
 .horizontal-padding {
   @apply px-[15vw];
