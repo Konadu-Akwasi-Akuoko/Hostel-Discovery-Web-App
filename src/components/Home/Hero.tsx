@@ -23,7 +23,7 @@ export default function Hero() {
             location, amenities, price and more to find your perfect match. Book
             now and enjoy your stay.
           </p>
-          <Button className="w-fit" variant={"defaultTomato"}>
+          <Button className="w-fit" variant={"tomato"}>
             Find A Hostel Now
           </Button>
         </div>

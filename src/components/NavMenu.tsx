@@ -15,14 +15,18 @@ export default function NavMenu() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href={"/"} legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyleT()}>
+            <NavigationMenuLink
+              className={navigationMenuTriggerStyleT() + " text-base"}
+            >
               Favorites
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href={"/"} legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyleT()}>
+            <NavigationMenuLink
+              className={navigationMenuTriggerStyleT() + " text-base"}
+            >
               Sign In
             </NavigationMenuLink>
           </Link>
