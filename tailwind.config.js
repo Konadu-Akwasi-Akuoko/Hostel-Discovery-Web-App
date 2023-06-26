@@ -18,6 +18,7 @@ module.exports = {
     extend: {
       colors: {
         tomato: generateScale("tomato"),
+        slate: generateScale("slate"),
       },
       keyframes: {
         "accordion-down": {

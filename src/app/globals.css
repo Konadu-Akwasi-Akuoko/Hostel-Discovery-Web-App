@@ -6,6 +6,10 @@
 @import "@radix-ui/colors/tomato-alpha.css";
 @import "@radix-ui/colors/tomato-dark.css";
 @import "@radix-ui/colors/tomato-dark-alpha.css";
+@import "@radix-ui/colors/slate.css";
+@import "@radix-ui/colors/slate-alpha.css";
+@import "@radix-ui/colors/slate-dark.css";
+@import "@radix-ui/colors/slate-dark-alpha.css";
 
 h1 {
   @apply text-4xl lg:text-5xl font-bold text-[--tomato-11];
