@@ -13,9 +13,11 @@ import {
 import { cn } from "@/lib/utils";
 
 export default function SelectFromComboBox({
+  className,
   options,
   defaultMessage,
 }: {
+  className?: string;
   options: { value: string; label: string }[];
   defaultMessage: string;
 }) {
@@ -31,7 +33,10 @@ export default function SelectFromComboBox({
           variant={"outline"}
           role="combobox"
           aria-expanded={open}
-          className="w-full justify-between text-tomato-12 hover:text-tomato-12"
+          className={cn(
+            "max-w-full justify-between text-tomato-12 hover:text-tomato-12",
+            className
+          )}
         >
           {value
             ? options.find((object) => object.value === value)?.label

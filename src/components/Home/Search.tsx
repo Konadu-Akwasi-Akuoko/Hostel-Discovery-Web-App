@@ -10,6 +10,27 @@ export default function Search() {
       <div className=" flex flex-col justify-center">
         <div className="flex flex-col lg:flex-row flex-wrap justify-between my-8">
           <SelectFromComboBox
+            className="w-full"
+            options={[
+              { value: "low", label: "Low" },
+              { value: "medium", label: "Medium" },
+              { value: "high", label: "High" },
+            ]}
+            defaultMessage={"Select A Price Rance"}
+          />
+          <SelectFromComboBox
+            className="w-full"
+
+            options={[
+              { value: "low", label: "Low" },
+              { value: "medium", label: "Medium" },
+              { value: "high", label: "High" },
+            ]}
+            defaultMessage={"Select A Price Rance"}
+          />{" "}
+          <SelectFromComboBox
+            className="w-full"
+
             options={[
               { value: "low", label: "Low" },
               { value: "medium", label: "Medium" },
