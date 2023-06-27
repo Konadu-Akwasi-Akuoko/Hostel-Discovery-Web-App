@@ -24,7 +24,7 @@ export default function NavBar() {
         {/* Nav menu */}
         <NavMenu />
       </header>
-      <div className="flex-1 w-full h-1 border-b border-slate-300"></div>
+      <div className="flex-1 w-full h-1 border-b border-slate-6"></div>
     </>
   );
 }
