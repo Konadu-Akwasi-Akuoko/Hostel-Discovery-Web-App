@@ -18,12 +18,12 @@ export default function FeaturedHostelCard({
 }) {
   return (
     <div className={cn("w-1/2", className)}>
-      <div className="rounded-lg overflow-hidden shadow-xl mb-3">
+      <div className="rounded-lg overflow-hidden shadow-xl mb-3 h-72">
         <Image
           src={hostelImg}
           alt="hostel"
           height={280}
-          style={{ maxWidth: "auto", height: "280px", objectFit: "cover" }}
+          style={{ width: "100%", height: "288px", objectFit: "cover" }}
           className="bg-tomato-3"
         />
       </div>
