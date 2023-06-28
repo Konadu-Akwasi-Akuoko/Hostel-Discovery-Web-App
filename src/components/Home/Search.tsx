@@ -1,46 +1,48 @@
 import React from "react";
 import SelectFromComboBox from "../SelectFromComboBox";
+import { Button } from "../ui/button";
 
 export default function Search() {
   return (
-    <section className="mx-[5vw] lg:mx-[15vw] mb-16 px-6 border border-tomato-6 rounded-lg">
+    <section className="mx-[5vw] lg:mx-[15vw] mb-16 px-6 pb-6 border border-tomato-6 rounded-lg">
       <p className=" py-4 border-b border-tomato-6 font-medium">
         Find your next best hostel
       </p>
-      <div className=" flex flex-col justify-center">
+      <div className=" flex flex-col">
         <div className="flex flex-col lg:flex-row flex-wrap gap-y-6 justify-between my-8">
           <SelectFromComboBox
             className="w-full lg:w-[30%]"
+            defaultMessage={"Price Rance"}
             options={[
               { value: "low", label: "Low" },
               { value: "medium", label: "Medium" },
               { value: "high", label: "High" },
             ]}
-            defaultMessage={"Select A Price Rance"}
           />
           <SelectFromComboBox
             className="w-full lg:w-[30%]"
+            defaultMessage={"Distance From Campus"}
             options={[
-              { value: "low", label: "Low" },
+              { value: "short", label: "Short" },
               { value: "medium", label: "Medium" },
-              { value: "high", label: "High" },
+              { value: "long", label: "Long" },
             ]}
-            defaultMessage={"Select A Price Rance"}
-          />{" "}
+          />
           <SelectFromComboBox
             className="w-full lg:w-[30%]"
+            defaultMessage={"Students Per Room"}
             options={[
-              { value: "low", label: "Low" },
-              { value: "medium", label: "Medium" },
-              { value: "high", label: "High" },
+              { value: "one", label: "One" },
+              { value: "two", label: "Two" },
+              { value: "three", label: "Three" },
+              { value: "four", label: "Four" },
+              { value: "five", label: "Five" },
             ]}
-            defaultMessage={"Select A Price Rance"}
           />
         </div>
-
-        <button className="btn mb-8 self-center w-1/5 bg-rose-700 hover:bg-rose-950 text-white">
+        <Button variant={"tomato"} className="w-3/12 self-center">
           Search
-        </button>
+        </Button>
       </div>
     </section>
   );
