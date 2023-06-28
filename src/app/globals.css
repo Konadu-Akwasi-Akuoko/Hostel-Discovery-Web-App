@@ -11,8 +11,20 @@
 @import "@radix-ui/colors/slate-dark.css";
 @import "@radix-ui/colors/slate-dark-alpha.css";
 
+* {
+  @apply text-tomato-12;
+}
+
 h1 {
   @apply text-4xl lg:text-5xl font-bold text-tomato-11;
+}
+
+h2 {
+  @apply text-3xl font-semibold text-tomato-11;
+}
+
+h3 {
+  @apply text-2xl font-semibold;
 }
 
 p {

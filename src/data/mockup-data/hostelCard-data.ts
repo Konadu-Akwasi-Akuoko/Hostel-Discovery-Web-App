@@ -5,11 +5,68 @@ import home4 from "@/assets/images/home4.jpg";
 import home5 from "@/assets/images/home5.jpg";
 import { hostelCardDataType } from "@/types/hostel-card-type";
 
-export const hostelCardData: hostelCardDataType = [
-  { image: home1, name: "Atwima Hostel", rating: 4, avgPrice: "300GHS" },
-  { image: home2, name: "Ama Serwaa Hostel", rating: 2, avgPrice: "400GHS" },
-  { image: home3, name: "Yaa Ataa Hostel", rating: 5, avgPrice: "500GHS" },
-  { image: home4, name: "Autonomy Hostel", rating: 3, avgPrice: "600GHS" },
-  { image: home5, name: "Boakye Hostel", rating: 4, avgPrice: "700GHS" },
-  { image: home3, name: "Yaa Ataa Hostel", rating: 5, avgPrice: "500GHS" },
+export const hostelCardData_6: hostelCardDataType = [
+  {
+    image: home1,
+    name: "Atwima Hostel",
+    hostelRating: 4,
+    hostelDistanceToCampus: "300",
+  },
+  {
+    image: home2,
+    name: "Serwaa Hostel",
+    hostelRating: 2,
+    hostelDistanceToCampus: "400",
+  },
+  {
+    image: home3,
+    name: "Ataa Hostel",
+    hostelRating: 5,
+    hostelDistanceToCampus: "500",
+  },
+  {
+    image: home4,
+    name: "Autonomy Hostel",
+    hostelRating: 3,
+    hostelDistanceToCampus: "600",
+  },
+  {
+    image: home5,
+    name: "Boakye Hostel",
+    hostelRating: 4,
+    hostelDistanceToCampus: "700",
+  },
+  {
+    image: home3,
+    name: "Yaa Ataa Hostel",
+    hostelRating: 5,
+    hostelDistanceToCampus: "500",
+  },
+];
+
+export const hostelCardData_4: hostelCardDataType = [
+  {
+    image: home1,
+    name: "Atwima Hostel",
+    hostelRating: 4,
+    hostelDistanceToCampus: "300",
+  },
+  {
+    image: home2,
+    name: "Serwaa Hostel",
+    hostelRating: 2,
+    hostelDistanceToCampus: "400",
+  },
+  {
+    image: home3,
+    name: "Ataa Hostel",
+    hostelRating: 5,
+    hostelDistanceToCampus: "500",
+  },
+  {
+    image: home4,
+    name: "Autonomy Hostel",
+    hostelRating: 3,
+    hostelDistanceToCampus: "600",
+  },
 ];
