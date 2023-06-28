@@ -8,9 +8,9 @@ export default function Search() {
         Find your next best hostel
       </p>
       <div className=" flex flex-col justify-center">
-        <div className="flex flex-col lg:flex-row flex-wrap justify-between my-8">
+        <div className="flex flex-col lg:flex-row flex-wrap gap-y-6 justify-between my-8">
           <SelectFromComboBox
-            className="w-full"
+            className="w-full lg:w-[30%]"
             options={[
               { value: "low", label: "Low" },
               { value: "medium", label: "Medium" },
@@ -19,8 +19,7 @@ export default function Search() {
             defaultMessage={"Select A Price Rance"}
           />
           <SelectFromComboBox
-            className="w-full"
-
+            className="w-full lg:w-[30%]"
             options={[
               { value: "low", label: "Low" },
               { value: "medium", label: "Medium" },
@@ -29,8 +28,7 @@ export default function Search() {
             defaultMessage={"Select A Price Rance"}
           />{" "}
           <SelectFromComboBox
-            className="w-full"
-
+            className="w-full lg:w-[30%]"
             options={[
               { value: "low", label: "Low" },
               { value: "medium", label: "Medium" },
