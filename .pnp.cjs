@@ -29,6 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@heroicons/react", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:2.0.18"],\
+            ["@iconify/react", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:4.1.1"],\
             ["@radix-ui/colors", "npm:1.0.0"],\
             ["@radix-ui/react-dialog", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:1.0.4"],\
             ["@radix-ui/react-icons", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:1.3.0"],\
@@ -230,6 +231,38 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@humanwhocodes-object-schema-npm-1.2.1-eb622b5d0e-a824a1ec31.zip/node_modules/@humanwhocodes/object-schema/",\
           "packageDependencies": [\
             ["@humanwhocodes/object-schema", "npm:1.2.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@iconify/react", [\
+        ["npm:4.1.1", {\
+          "packageLocation": "./.yarn/cache/@iconify-react-npm-4.1.1-f66d08052a-43b71a0eb4.zip/node_modules/@iconify/react/",\
+          "packageDependencies": [\
+            ["@iconify/react", "npm:4.1.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:4.1.1", {\
+          "packageLocation": "./.yarn/__virtual__/@iconify-react-virtual-059668f11d/0/cache/@iconify-react-npm-4.1.1-f66d08052a-43b71a0eb4.zip/node_modules/@iconify/react/",\
+          "packageDependencies": [\
+            ["@iconify/react", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:4.1.1"],\
+            ["@iconify/types", "npm:2.0.0"],\
+            ["@types/react", "npm:18.2.14"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@iconify/types", [\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/@iconify-types-npm-2.0.0-faa2398199-029f58542c.zip/node_modules/@iconify/types/",\
+          "packageDependencies": [\
+            ["@iconify/types", "npm:2.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3833,6 +3866,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["hostel-dsicovery", "workspace:."],\
             ["@heroicons/react", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:2.0.18"],\
+            ["@iconify/react", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:4.1.1"],\
             ["@radix-ui/colors", "npm:1.0.0"],\
             ["@radix-ui/react-dialog", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:1.0.4"],\
             ["@radix-ui/react-icons", "virtual:8ba01dbc38e60d53b7549ba474b8d9eaa669fcd28f5fa29df12208fc9432f0398e5e73c51b8ac1a2958eaba2ad8219715d82f75091eef18c668529e763bf85f6#npm:1.3.0"],\
