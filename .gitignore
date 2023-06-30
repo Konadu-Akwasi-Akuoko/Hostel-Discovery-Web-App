@@ -6,6 +6,7 @@
 .pnp.js
 #yarn dependencies
 .yarn/*
+.yarn/unplugged
 !.yarn/cache
 !.yarn/patches
 !.yarn/plugins
