@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
-import locationIcon from "@/assets/icons/location.svg";
 
 export default function FeaturedHostelCard({
   hostelImg,
