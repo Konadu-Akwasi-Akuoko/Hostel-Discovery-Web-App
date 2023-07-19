@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
-import locationIcon from "@/assets/icons/location.svg";
 
 export default function FeaturedHostelCard({
   hostelImg,
@@ -39,9 +38,9 @@ export default function FeaturedHostelCard({
               className="w-4 h-4 fill-tomato-12"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               />
             </svg>
             <p className="text-lg">{hostelRating}</p>
@@ -55,9 +54,9 @@ export default function FeaturedHostelCard({
             className="w-4 h-4 fill-slate-9"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             />
           </svg>
           <p className="text-slate-11">{hostelDistanceToCampus} to Campus</p>
