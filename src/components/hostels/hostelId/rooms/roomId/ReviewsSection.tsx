@@ -4,9 +4,9 @@ import { reviewMessages } from "@/data/mockup-data/reviewData";
 import Image from "next/image";
 import React from "react";
 
-export default function Reviews() {
+export default function ReviewsSection() {
   return (
-    <div className="w-[65%]">
+    <div className="">
       {/* Reviews and heading */}
       <div className="flex flex-wrap flex-row items-center gap-2 text-2xl font-semibold mb-6">
         <svg
@@ -25,7 +25,7 @@ export default function Reviews() {
         <p>149 review</p>
       </div>
       {/* Human details and what they are saying */}
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* card review */}
         {reviewMessages.map(
           ({ authorName, dateOfReview, authorMessage }, index) => (

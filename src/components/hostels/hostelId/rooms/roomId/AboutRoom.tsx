@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AboutRoom() {
   return (
-    <div className=" w-[65%] mt-6 mb-9">
+    <div className="mt-6 mb-9">
       <h2>About this room</h2>
       <p className="mt-4">
         Snow igloo with real beds inside. Nice atmosphere with led lights and
