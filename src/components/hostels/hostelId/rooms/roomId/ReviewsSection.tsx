@@ -27,16 +27,18 @@ export default function ReviewsSection() {
       {/* Human details and what they are saying */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* card review */}
-        {reviewMessages.map(
-          ({ authorName, dateOfReview, authorMessage }, index) => (
-            <ReviewCard
-              key={index}
-              authorName={authorName}
-              dateOfReview={dateOfReview}
-              authorMessage={authorMessage}
-            />
-          )
-        )}
+        {reviewMessages
+          .slice(0,4)
+          .map(({ authorName, dateOfReview, authorMessage }, index) => {
+            return (
+              <ReviewCard
+                key={index}
+                authorName={authorName}
+                dateOfReview={dateOfReview}
+                authorMessage={authorMessage}
+              />
+            );
+          })}
         {/* Show All button */}
       </div>
       <div className="mt-8">
