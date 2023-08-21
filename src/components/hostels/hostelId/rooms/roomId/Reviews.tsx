@@ -1,10 +1,14 @@
+import ReviewCard from "@/components/cards/ReviewCard";
+import { Button } from "@/components/ui/button";
+import { reviewMessages } from "@/data/mockup-data/reviewData";
+import Image from "next/image";
 import React from "react";
 
 export default function Reviews() {
   return (
     <div className="w-[65%]">
       {/* Reviews and heading */}
-      <div className="flex flex-wrap flex-row items-center gap-2 text-2xl mb-4">
+      <div className="flex flex-wrap flex-row items-center gap-2 text-2xl font-semibold mb-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -21,6 +25,23 @@ export default function Reviews() {
         <p>149 review</p>
       </div>
       {/* Human details and what they are saying */}
+      <div className="grid grid-cols-2 gap-8">
+        {/* card review */}
+        {reviewMessages.map(
+          ({ authorName, dateOfReview, authorMessage }, index) => (
+            <ReviewCard
+              key={index}
+              authorName={authorName}
+              dateOfReview={dateOfReview}
+              authorMessage={authorMessage}
+            />
+          )
+        )}
+        {/* Show All button */}
+      </div>
+      <div className="mt-8">
+        <Button variant={"tomato-outline"}>Show all 10 reviews</Button>
+      </div>
     </div>
   );
 }
