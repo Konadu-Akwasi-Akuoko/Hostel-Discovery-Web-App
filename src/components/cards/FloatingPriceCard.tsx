@@ -156,6 +156,13 @@ export default function FloatingPriceCard() {
         {/* Message button */}
         <Button>Message Manager</Button>
       </div>
+      {/* Breaker */}
+      <div className="h-[1px] w-full my-6 bg-slate-7"></div>
+      <p className="text-slate-11 text-sm">
+        To protect yourself always deal with verified hostel managers. Always
+        look out for the red verification badge on a manager&apos;s picture,
+        that show he&apos;s verified.
+      </p>
     </div>
   );
 }
