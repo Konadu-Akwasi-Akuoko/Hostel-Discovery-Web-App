@@ -1,9 +1,6 @@
 import ReviewCard from "@/components/cards/ReviewCard";
 import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { reviewMessages } from "@/data/mockup-data/reviewData";
-import Image from "next/image";
 import React from "react";
 import AddYourComment from "../AddYourComment";
 
@@ -45,10 +42,10 @@ export default function ReviewsSection() {
         {/* Show All button */}
       </div>
       {/* Add your review */}
-      <AddYourComment />
       <div className="mt-8">
         <Button variant={"tomato-outline"}>Show all 10 reviews</Button>
       </div>
+      <AddYourComment />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@radix-ui/react-label";
@@ -8,7 +8,7 @@ export default function AddYourComment() {
   return (
     <div className="mt-8 w-3/4">
       <Label htmlFor="reviewMessage" className="font-bold mb-3">
-        Add your review
+        Submit a review
       </Label>
       <Textarea
         placeholder="What do you think about this hostel..."
