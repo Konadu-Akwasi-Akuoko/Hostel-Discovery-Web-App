@@ -4,6 +4,7 @@ import PictureSection from "./PictureSection";
 import NameAndAbout from "./NameAndAbout";
 import Aside from "./Aside";
 import Features from "./Features";
+import Rooms from "./Rooms";
 
 export default function Content() {
   return (
@@ -15,6 +16,7 @@ export default function Content() {
         <div className="w-full lg:w-[65%]">
           <NameAndAbout />
           <Features />
+          <Rooms />
         </div>
         {/* Aside */}
         <Aside />
