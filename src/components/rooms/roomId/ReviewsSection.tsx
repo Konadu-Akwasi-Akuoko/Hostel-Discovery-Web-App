@@ -1,8 +1,8 @@
 import ReviewCard from "@/components/cards/ReviewCard";
 import { Button } from "@/components/ui/button";
 import { reviewMessages } from "@/data/mockup-data/reviewData";
-import Image from "next/image";
 import React from "react";
+import AddYourComment from "./AddYourComment";
 
 export default function ReviewsSection() {
   return (
@@ -28,7 +28,7 @@ export default function ReviewsSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* card review */}
         {reviewMessages
-          .slice(0,4)
+          .slice(0, 4)
           .map(({ authorName, dateOfReview, authorMessage }, index) => {
             return (
               <ReviewCard
@@ -41,9 +41,11 @@ export default function ReviewsSection() {
           })}
         {/* Show All button */}
       </div>
+      {/* Add your review */}
       <div className="mt-8">
         <Button variant={"tomato-outline"}>Show all 10 reviews</Button>
       </div>
+      <AddYourComment />
     </div>
   );
 }

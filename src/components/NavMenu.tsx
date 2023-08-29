@@ -8,11 +8,15 @@ import {
   navigationMenuTriggerStyleT,
 } from "./ui/navigation-menu";
 import Link from "next/link";
+import ThemeButton from "./ThemeButton";
 
 export default function NavMenu() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
+        <NavigationMenuItem>
+          <ThemeButton />
+        </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href={"/"} legacyBehavior passHref>
             <NavigationMenuLink

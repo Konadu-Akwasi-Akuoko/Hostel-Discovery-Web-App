@@ -11,10 +11,8 @@ export type featuredHostelRoomType = {
   image: StaticImageData;
   parentHostelName: string;
   hostelRoomName: string;
-  hostelRoomRating: number;
   isSharedBathhouse: boolean;
   isSharedKitchen: boolean;
   personPerRoom: number;
-  roomSize: number;
   price: number;
 };

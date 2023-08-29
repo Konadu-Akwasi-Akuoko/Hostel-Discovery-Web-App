@@ -8,7 +8,7 @@ import NavMenu from "./NavMenu";
 export default function NavBar() {
   return (
     <>
-      <header className="horizontal-padding flex flex-row py-6 justify-between">
+      <header className="horizontal-padding flex flex-row flex-wrap py-6 justify-between">
         {/* The logo and name */}
         <Link href={"/"}>
           <div className="flex flex-row">

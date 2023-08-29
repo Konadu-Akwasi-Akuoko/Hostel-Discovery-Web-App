@@ -1,9 +1,10 @@
+import Breaker from "@/components/Breaker";
 import MdFeatureCard from "@/components/cards/MdFeatureCard";
 import SmFeatureCard from "@/components/cards/SmFeatureCard";
 import { Button } from "@/components/ui/button";
 import React from "react";
 
-export default function FeatureAndPrice() {
+export default function Features() {
   return (
     <>
       {/* <div className="mt-12 flex flex-col lg:flex-row justify-between"> */}
@@ -81,10 +82,9 @@ export default function FeatureAndPrice() {
         </SmFeatureCard>
       </div>
       {/* Breaker */}
-      <div className="w-full h-[1px] bg-tomato-6 my-8"></div>
+      <Breaker />
       {/* Other features */}
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        {" "}
         <MdFeatureCard>
           <svg
             xmlns="http://www.w3.org/2000/svg"

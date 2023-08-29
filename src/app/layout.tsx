@@ -1,6 +1,9 @@
 import NavBar from "@/components/NavBar";
 import "./globals.css";
 import { ubuntu } from "@/utils/fonts";
+import Footer from "@/components/Footer";
+import StoreProvider from "@/components/providers/StoreProvider";
+import ThemeProvider from "@/components/providers/ThemeProvider";
 
 export const metadata = {
   title: "Phynda",
@@ -14,10 +17,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={ubuntu.className + " bg-[--tomato-1] min-h-screen"}>
-        <NavBar />
-        {children}
-      </body>
+      <StoreProvider>
+        <body className={ubuntu.className}>
+          <ThemeProvider>
+            <NavBar />
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </body>
+      </StoreProvider>
     </html>
   );
 }

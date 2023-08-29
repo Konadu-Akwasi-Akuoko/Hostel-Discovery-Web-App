@@ -8,11 +8,9 @@ export default function HighlyRatedRoomCard({
   image,
   parentHostelName,
   hostelRoomName: name,
-  hostelRoomRating,
   isSharedBathhouse,
   isSharedKitchen,
   personPerRoom,
-  roomSize,
   price,
   className,
 }: featuredHostelRoomType & { className?: string }) {
@@ -20,12 +18,12 @@ export default function HighlyRatedRoomCard({
     <Link href={""}>
       <div
         className={cn(
-          "w-full h-full bg-white rounded-lg overflow-hidden border border-tomato-6 shadow-xl",
+          "w-full h-full bg-white dark:bg-black rounded-lg overflow-hidden border border-tomato-6 shadow-xl",
           className
         )}
       >
-        <div>
-          <Image src={image} alt="hostel image" />
+        <div className="h-60">
+          <Image src={image} alt="hostel image" className="h-full" />
         </div>
         <div className="p-5 flex flex-col gap-y-3">
           {/* Name and parent hostel name  */}
@@ -33,22 +31,6 @@ export default function HighlyRatedRoomCard({
             <p className="font-bold text-lg text-tomato-11 mb-4">
               {name}, {parentHostelName}
             </p>
-          </div>
-          {/* Hostel room rating   */}
-          <div className="flex flex-row gap-1 items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 22 22"
-              fill="currentColor"
-              className="w-4 h-4 fill-tomato-12"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <p>{hostelRoomRating}/5 stars</p>
           </div>
           {/* isSharedBathhouse  */}
           <div className="flex flex-row gap-1 items-center">
@@ -98,21 +80,6 @@ export default function HighlyRatedRoomCard({
               />
             </svg>
             <p>{personPerRoom} per room</p>
-          </div>
-          {/* room size */}
-          <div className="flex flex-row gap-1 items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M9 5a7 7 0 0 1 7 7h1v3h-1v4H9a7 7 0 0 1-7-7a7 7 0 0 1 7-7m0 3a4 4 0 0 0-4 4a4 4 0 0 0 4 4a4 4 0 0 0 4-4a4 4 0 0 0-4-4m8 9h5v4h-2v-2h-3v-2Z"
-              />
-            </svg>
-            <div>{roomSize} sq ft</div>
           </div>
           {/* price */}
           <div className="flex flex-row gap-1 items-center">
