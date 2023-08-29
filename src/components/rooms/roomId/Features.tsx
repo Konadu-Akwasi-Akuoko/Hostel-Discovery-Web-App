@@ -4,7 +4,7 @@ import SmFeatureCard from "@/components/cards/SmFeatureCard";
 import { Button } from "@/components/ui/button";
 import React from "react";
 
-export default function FeatureAndPrice() {
+export default function Features() {
   return (
     <>
       {/* <div className="mt-12 flex flex-col lg:flex-row justify-between"> */}

@@ -1,5 +1,10 @@
+import Content from "@/components/hostels/hostelId/Content";
 import React from "react";
 
 export default function HostelId({ params }: { params: { hostelId: string } }) {
-  return <div>Hostel ID: {params.hostelId} </div>;
+  return (
+    <main className="horizontal-padding">
+      <Content />
+    </main>
+  );
 }
