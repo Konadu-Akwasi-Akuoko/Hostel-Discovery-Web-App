@@ -16,7 +16,7 @@ export default function Content() {
         <div className="w-full lg:w-[65%]">
           <NameAndAbout />
           <Features />
-          <Rooms />
+          <Rooms/>
         </div>
         {/* Aside */}
         <Aside />
