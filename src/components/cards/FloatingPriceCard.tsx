@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
+import Breaker from "../Breaker";
 
 export default function FloatingPriceCard() {
   return (
@@ -157,7 +158,7 @@ export default function FloatingPriceCard() {
         <Button>Message Manager</Button>
       </div>
       {/* Breaker */}
-      <div className="h-[1px] w-full my-6 bg-slate-7"></div>
+      <Breaker />
       <p className="text-slate-11 text-sm">
         To protect yourself always deal with verified hostel managers. Always
         look out for the red verification badge on a manager&apos;s picture,

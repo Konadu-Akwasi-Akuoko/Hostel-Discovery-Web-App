@@ -2,7 +2,7 @@ import ReviewCard from "@/components/cards/ReviewCard";
 import { Button } from "@/components/ui/button";
 import { reviewMessages } from "@/data/mockup-data/reviewData";
 import React from "react";
-import AddYourComment from "../AddYourComment";
+import AddYourComment from "./AddYourComment";
 
 export default function ReviewsSection() {
   return (

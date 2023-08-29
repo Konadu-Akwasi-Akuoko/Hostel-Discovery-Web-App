@@ -2,7 +2,7 @@
 import PictureSection from "@/components/hostels/hostelId/rooms/roomId/PicturesSection";
 import NameStatsBar from "@/components/hostels/hostelId/rooms/roomId/NameStatsBar";
 import React from "react";
-import FeaturesAboutAndReviewSection from "@/components/hostels/hostelId/rooms/roomId/FeaturesAboutAndPriceSection";
+import Content from "@/components/hostels/hostelId/rooms/roomId/Content";
 
 export default function RoomId({ params }: { params: { roomId: string } }) {
   // Use useSearchParams or useRouter(preferred) to to get the hostel ID from the URL
@@ -11,7 +11,7 @@ export default function RoomId({ params }: { params: { roomId: string } }) {
       {/* Top bar with name, starts, number of review, location, share and save buttons */}
       <NameStatsBar />
       <PictureSection />
-      <FeaturesAboutAndReviewSection />
+      <Content />
     </main>
   );
 }
