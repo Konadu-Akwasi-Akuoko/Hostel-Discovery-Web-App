@@ -10,7 +10,7 @@ export default function AsideSearch() {
       {/* Search */}
       <div className="flex flex-col gap-2 mb-6">
         <Label htmlFor="roomName" className="text-xl font-normal">
-          Search by room name
+          Search for the perfect room
         </Label>
         <Input
           placeholder="Name of room..."
@@ -22,7 +22,7 @@ export default function AsideSearch() {
         <p className="text-xl">Filter by...</p>
         <Filters />
       </div>
-      <Button variant={"tomato"} className="w-3/4 mt-6">
+      <Button variant={"tomato"} className="w-full mt-6">
         Search
       </Button>
     </aside>
