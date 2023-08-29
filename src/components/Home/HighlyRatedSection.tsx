@@ -14,11 +14,9 @@ export default function HighlyRatedSection() {
               image={item.image}
               parentHostelName={item.parentHostelName}
               hostelRoomName={item.hostelRoomName}
-              hostelRoomRating={item.hostelRoomRating}
               isSharedBathhouse={item.isSharedBathhouse}
               isSharedKitchen={item.isSharedKitchen}
               personPerRoom={item.personPerRoom}
-              roomSize={item.roomSize}
               price={item.price}
             />
           );
