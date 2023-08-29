@@ -18,7 +18,7 @@ export default function HighlyRatedRoomCard({
     <Link href={""}>
       <div
         className={cn(
-          "w-full h-full bg-white rounded-lg overflow-hidden border border-tomato-6 shadow-xl",
+          "w-full h-full bg-white dark:bg-black rounded-lg overflow-hidden border border-tomato-6 shadow-xl",
           className
         )}
       >

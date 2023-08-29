@@ -1,12 +1,13 @@
 "use client";
 import { store } from "@/store/store";
 import { selectIsDark, setIsDarkTheme } from "@/store/themeSlice";
-import React from "react";
+import React, { PointerEvent } from "react";
 import { useSelector } from "react-redux";
 
 export default function ThemeButton() {
   const isDark = useSelector(selectIsDark);
-  const onButtonClick = (e: any) => {
+  // TODO: Work on the logic here, because it's too unpredictable
+  const onButtonClick = (e: PointerEvent<HTMLButtonElement>) => {
     store.dispatch(setIsDarkTheme(!isDark));
     if (isDark) {
       localStorage.setItem("theme", "light");
