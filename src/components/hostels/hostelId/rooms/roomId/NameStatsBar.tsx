@@ -5,7 +5,7 @@ export default function NameStatsBar() {
   return (
     <div className="mt-6">
       {/* Top bar with name, starts, number of review, location, share and save buttons */}
-      <h1 className="text-2xl">Atwima Hostel</h1>
+      <h1 className="text-2xl">Atwima Hostel Room</h1>
       <div className="flex flex-row flex-wrap gap-4 text-sm justify-between mt-2">
         {/* Rating, Number of Reviews,Location */}
         <div className="flex flex-row items-end">
