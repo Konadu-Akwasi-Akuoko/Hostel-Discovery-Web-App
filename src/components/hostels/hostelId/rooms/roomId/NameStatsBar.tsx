@@ -1,3 +1,4 @@
+import Badge from "@/components/cards/Badge";
 import React from "react";
 
 export default function NameStatsBar() {
@@ -5,7 +6,7 @@ export default function NameStatsBar() {
     <div className="mt-6">
       {/* Top bar with name, starts, number of review, location, share and save buttons */}
       <h1 className="text-2xl">Atwima Hostel</h1>
-      <div className="flex flex-row text-sm justify-between mt-2">
+      <div className="flex flex-row flex-wrap gap-4 text-sm justify-between mt-2">
         {/* Rating, Number of Reviews,Location */}
         <div className="flex flex-row items-end">
           {/* Rating */}
@@ -63,6 +64,36 @@ export default function NameStatsBar() {
         </div>
         {/* Share and Save buttons  */}
         <div className="flex flex-row gap-x-2 items-center">
+          {/* Available or Unavailable */}
+          <Badge bgColor="bg-green-200">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 12 12"
+              className="fill-green-900"
+            >
+              <path d="M6 0a6 6 0 1 0 0 12A6 6 0 0 0 6 0ZM1.5 6a4.5 4.5 0 1 1 9 0a4.5 4.5 0 0 1-9 0Zm7.03-1.78a.75.75 0 0 1 0 1.06L5.78 8.03a.75.75 0 0 1-1.06 0l-1-1a.75.75 0 0 1 1.06-1.06l.47.47l2.22-2.22a.75.75 0 0 1 1.06 0Z" />
+            </svg>
+            <p className="text-green-900">Available</p>
+          </Badge>
+          {/* Unavailable */}
+          <Badge bgColor="bg-red-200">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              className="fill-red-900"
+            >
+              <path
+                fillRule="evenodd"
+                d="M7.503 5.382a8 8 0 0 1 11.114 11.114L7.504 5.383Zm-2.12 2.121a8 8 0 0 0 11.114 11.114L5.382 7.504ZM12 2a9.972 9.972 0 0 0-7.071 2.929A9.972 9.972 0 0 0 2 12c0 5.523 4.477 10 10 10a9.972 9.972 0 0 0 7.071-2.929A9.972 9.972 0 0 0 22 12c0-5.523-4.477-10-10-10Z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <p className="text-red-900">Unavailable</p>
+          </Badge>
           {/* Share */}
           <div className="flex flex-row items-center gap-1">
             <svg
