@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -11,14 +11,34 @@ import Link from "next/link";
 import ThemeButton from "./ThemeButton";
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
+import { store } from "@/store/store";
+import { selectUserData, setUserData } from "@/store/userSlice";
+import { useSelector } from "react-redux";
+import SignedInButton from "./SginedInButton";
 
 export default function NavMenu() {
-  const { data } = useSession({
+  const { data: session } = useSession({
     required: false,
     onUnauthenticated() {
       redirect("/api/auth/signin?callbackUrl=/");
     },
   });
+
+  const userData = useSelector(selectUserData);
+
+  // When ever we receive the data from the session
+  useEffect(() => {
+    // set the user state with the data
+    store.dispatch(
+      setUserData({
+        name: session?.user?.name as string,
+        image: session?.user?.image as string,
+        email: session?.user?.email as string,
+        loggedIn: true,
+      })
+    );
+  }, [session]);
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -35,13 +55,7 @@ export default function NavMenu() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href={"/api/auth/signin"} legacyBehavior passHref>
-            <NavigationMenuLink
-              className={navigationMenuTriggerStyleT() + " text-base"}
-            >
-              Sign In
-            </NavigationMenuLink>
-          </Link>
+          <SignedInButton />
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
