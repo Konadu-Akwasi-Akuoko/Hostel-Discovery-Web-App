@@ -2,7 +2,7 @@ import { store } from "@/store/store";
 import { selectUserData, setUserData } from "@/store/userSlice";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
-import { redirect } from "next/navigation";
+import { redirect, usePathname } from "next/navigation";
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Image from "next/image";
@@ -15,14 +15,13 @@ import {
 } from "./ui/dropdown-menu";
 
 export default function SignedInButton() {
-  const { data: session } = useSession({
+  const pathname = usePathname();
+  const { data: session, status } = useSession({
     required: false,
     onUnauthenticated() {
       redirect("/api/auth/signin?callbackUrl=/");
     },
   });
-
-  const userData = useSelector(selectUserData);
 
   // When ever we receive the data from the session
   useEffect(() => {
@@ -32,10 +31,10 @@ export default function SignedInButton() {
         name: session?.user?.name as string,
         image: session?.user?.image as string,
         email: session?.user?.email as string,
-        loggedIn: true,
+        loggedIn: status == "authenticated" ? true : false,
       })
     );
-  }, [session]);
+  }, [session, status]);
 
   return (
     <>
@@ -55,14 +54,16 @@ export default function SignedInButton() {
               <DropdownMenuItem>Add a hostel</DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem>
-                <Link href={"/api/auth/signout"}> Sign out</Link>
+                <Link href={`/api/auth/signout?callback=${pathname}`}>
+                  Sign out
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
       ) : (
         <Link
-          href={"/api/auth/signin"}
+          href={`/api/auth/signin?callback=${pathname}`}
           className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-tomato-1 text-tomato-11 px-4 py-2 font-medium transition-colors hover:bg-tomato-3 hover:text-tomato-11 focus:bg-tomato-4 focus:text-tomato-12 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-slate-100/50 data-[state=open]:bg-slate-100/50 dark:data-[active]:bg-slate-800/50 dark:data-[state=open]:bg-slate-800/50 text-base"
         >
           Sign In

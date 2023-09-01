@@ -5,7 +5,7 @@ export interface UserState {
   name: string;
   image: string;
   email: string;
-  loggedIn?: boolean;
+  loggedIn: boolean;
 }
 
 const initialUserState: UserState = {
@@ -23,6 +23,7 @@ const userSlice = createSlice({
       state.name = action.payload.name;
       state.image = action.payload.image;
       state.email = action.payload.email;
+      state.loggedIn = action.payload.loggedIn;
     },
   },
 });
