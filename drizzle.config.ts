@@ -7,7 +7,7 @@ if (!process.env.DATABASE_URL) {
 }
 
 export default {
-  schema: "./src/db/*",
+  schema: "./src/db/schema.ts",
   out: "./drizzle",
   driver: "mysql2",
   dbCredentials: {
