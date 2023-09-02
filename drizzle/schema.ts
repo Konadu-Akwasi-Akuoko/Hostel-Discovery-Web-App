@@ -73,10 +73,10 @@ export const rooms = mysqlTable("rooms", {
 
 export const users = mysqlTable("users", {
 	id: int("id").autoincrement().notNull(),
-	name: varchar("name", { length: 255 }),
-	email: varchar("email", { length: 255 }),
-	picture: varchar("picture", { length: 255 }),
-	isManager: tinyint("isManager"),
+	name: varchar("name", { length: 255 }).notNull(),
+	email: varchar("email", { length: 255 }).notNull(),
+	picture: varchar("picture", { length: 255 }).notNull(),
+	isManager: tinyint("isManager").notNull(),
 },
 (table) => {
 	return {

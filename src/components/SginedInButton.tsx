@@ -13,9 +13,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import getUser from "@/lib/getUser";
 
 export default function SignedInButton() {
   const pathname = usePathname();
+  const { name, email, image } = useSelector(selectUserData);
   const { data: session, status } = useSession({
     required: false,
     onUnauthenticated() {
@@ -34,6 +36,17 @@ export default function SignedInButton() {
         loggedIn: status == "authenticated" ? true : false,
       })
     );
+    // Check to see if the user details is in the database
+    const checkDataInDB = async () => {
+      // Use the fetch api here but if you have a component that needs data use the rtk query
+      const dataInDatabase = await fetch("/api/user/", {
+        method: "POST",
+        body: JSON.stringify({ name: name, picture: image, email: email }),
+      });
+      console.log(await dataInDatabase.json());
+    };
+
+    checkDataInDB();
   }, [session, status]);
 
   return (
