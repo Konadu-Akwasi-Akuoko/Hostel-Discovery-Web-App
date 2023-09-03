@@ -14,6 +14,7 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import getUser from "@/lib/getUser";
+import { client } from "@/contracts/client";
 
 export default function SignedInButton() {
   const pathname = usePathname();
@@ -40,11 +41,16 @@ export default function SignedInButton() {
       // Check to see if the user details is in the database
       const checkDataInDB = async () => {
         // Use the fetch api here but if you have a component that needs data use the rtk query
-        const dataInDatabase = await fetch("/api/user/", {
-          method: "POST",
-          body: JSON.stringify({ name: name, picture: image, email: email }),
+        const { body, status } = await client.getUser({
+          body: {
+            name: name,
+            picture: image,
+            email: email,
+          },
         });
-        console.log(await dataInDatabase.json());
+        if (status == 201) {
+          console.log(body);
+        }
       };
 
       checkDataInDB();
