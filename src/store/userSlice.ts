@@ -2,6 +2,7 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "./store";
 
 export interface UserState {
+  id?: number ;
   name: string;
   image: string;
   email: string;
@@ -24,6 +25,7 @@ const userSlice = createSlice({
       state.image = action.payload.image;
       state.email = action.payload.email;
       state.loggedIn = action.payload.loggedIn;
+      state.id = action.payload.id;
     },
   },
 });

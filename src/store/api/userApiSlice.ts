@@ -7,7 +7,7 @@ export const userApiSlice = createApi({
   endpoints: (builder) => ({
     getUser: builder.query<User[], Pick<User, "name" | "picture" | "email">>({
       query: (userDetails) => ({
-        url: "/user",
+        url: "/user/get",
         method: "POST",
         body: userDetails,
       }),

@@ -19,6 +19,7 @@ export default async function getUser(
         )
       );
     if (result.length > 0) {
+      // console.log(result)
       return result[0];
     } else {
       return false;

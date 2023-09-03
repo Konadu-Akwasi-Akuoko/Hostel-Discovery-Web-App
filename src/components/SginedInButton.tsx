@@ -13,8 +13,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import getUser from "@/lib/getUser";
-import { client } from "@/contracts/client";
+import { checkDataInDB } from "@/lib/checkAndAddUser";
 
 export default function SignedInButton() {
   const pathname = usePathname();
@@ -38,22 +37,7 @@ export default function SignedInButton() {
       })
     );
     if (loggedIn) {
-      // Check to see if the user details is in the database
-      const checkDataInDB = async () => {
-        // Use the fetch api here but if you have a component that needs data use the rtk query
-        const { body, status } = await client.getUser({
-          body: {
-            name: name,
-            picture: image,
-            email: email,
-          },
-        });
-        if (status == 201) {
-          console.log(body);
-        }
-      };
-
-      checkDataInDB();
+      checkDataInDB(name, image, email);
     }
   }, [session, status, loggedIn]);
 
