@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import themeReducer from "./themeSlice";
 import userReducer from "./userSlice";
-import { userApiSlice } from "./api/userSlice";
+import { userApiSlice } from "./api/userApiSlice";
 
 export const store = configureStore({
   reducer: {
