@@ -17,7 +17,8 @@ import { checkDataInDB } from "@/lib/checkAndAddUser";
 
 export default function SignedInButton() {
   const pathname = usePathname();
-  const { name, email, image, loggedIn } = useSelector(selectUserData);
+  const { name, email, image, isLoggedIn, isManager } =
+    useSelector(selectUserData);
   const { data: session, status } = useSession({
     required: false,
     onUnauthenticated() {
@@ -33,13 +34,14 @@ export default function SignedInButton() {
         name: session?.user?.name as string,
         image: session?.user?.image as string,
         email: session?.user?.email as string,
-        loggedIn: status == "authenticated" ? true : false,
+        isLoggedIn: status == "authenticated" ? true : false,
+        isManager: isManager,
       })
     );
-    if (loggedIn) {
+    if (isLoggedIn) {
       checkDataInDB(name, image, email);
     }
-  }, [session, status, loggedIn]);
+  }, [session, status, isLoggedIn]);
 
   return (
     <>
@@ -56,7 +58,14 @@ export default function SignedInButton() {
               />
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuItem>Add a hostel</DropdownMenuItem>
+              {isManager ? (
+                <DropdownMenuItem>Add a hostel</DropdownMenuItem>
+              ) : (
+                <DropdownMenuItem>
+                  <Link href={"/manager/signup"}>Become a manager</Link>
+                </DropdownMenuItem>
+              )}
+
               <DropdownMenuSeparator />
               <DropdownMenuItem>
                 <Link href={`/api/auth/signout?callback=${pathname}`}>

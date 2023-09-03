@@ -2,6 +2,7 @@ import { client } from "@/contracts/client";
 import { store } from "@/store/store";
 import { setUserData } from "@/store/userSlice";
 
+// !!!!!!!!
 // TODO: Fix the error of the function name mismatch in the function calling
 // TODO: at @file: SingedInButton.tsx
 
@@ -11,46 +12,32 @@ export async function checkDataInDB(
   email: string,
   picture: string
 ) {
-  // Use the fetch api here but if you have a component that needs data use the rtk query
-  const { body, status } = await client.getUser({
-    body: {
-      name: name,
-      picture: picture,
-      email: email,
-    },
-  });
-  if (body && status == 200) {
-    store.dispatch(
-      setUserData({
-        id: body.id,
-        name: body.name,
-        image: body.picture,
-        email: body.email,
-        loggedIn: true,
-      })
-    );
-  }
-  // console.log(body);
-  // If the return type is false, add user to database
-  if (!body) {
-    const { body, status } = await client.addUser({
-      body: {
+  try {
+    const response = await fetch("/api/user/get", {
+      method: "POST",
+      body: JSON.stringify({
         name: name,
         email: email,
         picture: picture,
-      },
+      }),
     });
-    // console.log("Added this: \n" + body);
-    if (body && status == 200) {
+    const data = await response.json();
+    console.log(data);
+    // Handle the response data
+    if (data) {
+      console.log(data);
       store.dispatch(
         setUserData({
-          id: body.id,
-          name: body.name,
-          image: body.picture,
-          email: body.email,
-          loggedIn: true,
+          name: name,
+          email: email,
+          image: picture,
+          isLoggedIn: true,
+          isManager: true,
         })
       );
+      console.log("Is manager set to true");
     }
+  } catch (e) {
+    console.error("Could not fetch data:", e);
   }
 }

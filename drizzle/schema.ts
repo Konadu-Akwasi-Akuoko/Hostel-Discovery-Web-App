@@ -1,4 +1,4 @@
-import { mysqlTable, mysqlSchema, AnyMySqlColumn, index, primaryKey, int, varchar, tinyint, float } from "drizzle-orm/mysql-core"
+import { mysqlTable, mysqlSchema, AnyMySqlColumn, index, primaryKey, int, varchar, tinyint, unique, float } from "drizzle-orm/mysql-core"
 import { sql } from "drizzle-orm"
 
 
@@ -37,12 +37,13 @@ export const managers = mysqlTable("managers", {
 	id: int("id").autoincrement().notNull(),
 	userId: int("userId").notNull(),
 	about: varchar("about", { length: 255 }),
-	telephone: varchar("telephone", { length: 255 }),
+	telephone: varchar("telephone", { length: 10 }),
 },
 (table) => {
 	return {
 		userIdIdx: index("userId_idx").on(table.userId),
 		managersId: primaryKey(table.id),
+		userId: unique("userId").on(table.userId),
 	}
 });
 
