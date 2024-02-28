@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -9,6 +9,7 @@ import {
 } from "./ui/navigation-menu";
 import Link from "next/link";
 import ThemeButton from "./ThemeButton";
+import SignedInButton from "./SginedInButton";
 
 export default function NavMenu() {
   return (
@@ -27,13 +28,7 @@ export default function NavMenu() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href={"/"} legacyBehavior passHref>
-            <NavigationMenuLink
-              className={navigationMenuTriggerStyleT() + " text-base"}
-            >
-              Sign In
-            </NavigationMenuLink>
-          </Link>
+          <SignedInButton />
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

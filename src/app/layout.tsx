@@ -4,6 +4,8 @@ import { ubuntu } from "@/utils/fonts";
 import Footer from "@/components/Footer";
 import StoreProvider from "@/components/providers/StoreProvider";
 import ThemeProvider from "@/components/providers/ThemeProvider";
+import { SessionProvider } from "next-auth/react";
+import AuthProvider from "@/components/providers/AuthProvider";
 
 export const metadata = {
   title: "Phynda",
@@ -19,11 +21,13 @@ export default function RootLayout({
     <html lang="en">
       <StoreProvider>
         <body className={ubuntu.className}>
-          <ThemeProvider>
-            <NavBar />
-            {children}
-            <Footer />
-          </ThemeProvider>
+          <AuthProvider>
+            <ThemeProvider>
+              <NavBar />
+              {children}
+              <Footer />
+            </ThemeProvider>
+          </AuthProvider>
         </body>
       </StoreProvider>
     </html>

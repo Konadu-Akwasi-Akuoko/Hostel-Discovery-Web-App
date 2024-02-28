@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Hostels() {
   return (
-    <main className="horizontal-padding my-12">
+    <main className="horizontal-padding my-16">
       <SearchBar />
       <AllHostels />
     </main>
